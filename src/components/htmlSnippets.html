@@ -1,0 +1,80 @@
+<fieldset className="form-group">
+            <legend class="mt-4">Time duration for the expense above</legend>
+            <div className="form-check">
+              <input
+                className="form-check-input"
+                type="radio"
+                name="optionsRadios"
+                id="daily"
+                value="daily"
+                checked="checked"
+              />
+              <label className="form-check-label" htmlfor="daily">
+                daily
+              </label>
+            </div>
+            <div className="form-check">
+              <input
+                className="form-check-input"
+                type="radio"
+                name="optionsRadios"
+                id="weekly"
+                value="weekly"
+              />
+              <label className="form-check-label" htmlfor="weekly">
+                weekly
+              </label>
+            </div>
+            <div className="form-check">
+              <input
+                className="form-check-input"
+                type="radio"
+                name="optionsRadios"
+                id="monthly"
+                value="monthly"
+              />
+              <label className="form-check-label" htmlfor="monthly">
+                monthly
+              </label>
+            </div>
+          </fieldset>
+
+
+<!-- I need to duplicate the following inputs  -->
+
+          
+
+          <div class="form-group">
+            <fieldset disabled="">
+              <label class="form-label" for="disabledInput">Disabled input</label>
+              <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled="">
+            </fieldset>
+          </div>
+
+
+          <h3>Summary of results</h3>
+            <ul>
+              <li>
+                 <strong></strong>
+              </li>
+              <li>
+                {" "}
+                <strong></strong>
+              </li>
+
+              {message === "Yes you can save some amount of money" ? (
+                {message}
+                  Amount savable: <strong></strong>
+              ) : (
+                  ExceededAmount: <strong>{exceededAmount}</strong>
+              )}
+            </ul>
+
+            <div class="alert alert-dismissible alert-warning">
+              <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+              <h4 className="alert-heading mb-0">{message}</h4>
+            </div>
+            <div class="alert alert-dismissible alert-success">
+              <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+              <strong>{message}</strong>.
+            </div>
